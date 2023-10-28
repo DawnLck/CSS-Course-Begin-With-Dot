@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { Button } from "antd";
-import { default as Course } from "./pages/DotCourse";
+import { useState } from "react";
 import "./App.css";
+import { default as Course } from "./pages/DotCourse";
 
 function App() {
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(true);
   return (
     <div className="App">
       {/* Welcome */}

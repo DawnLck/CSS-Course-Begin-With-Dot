@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "@ant-design/icons": "5.2.6",
+    "ahooks": "^3.7.8",
     "antd": "5.10.2",
+    "classnames": "^2.3.2",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.28",
@@ -25,7 +29,9 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "less": "^4.2.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.11"
-  }
+  },
+  "repository": "https://github.com/DawnLck/CSS-Course-Begin-With-Dot.git"
 }

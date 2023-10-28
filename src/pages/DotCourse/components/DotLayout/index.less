@@ -1,0 +1,68 @@
+.my-dot-layout {
+    border: 2px dashed rgb(227, 74, 74);
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+
+    .dot-layout-child {
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 0;
+        background-color: #1677ff;
+    }
+
+    &.layer {
+        position: relative;
+
+        .dot-layout-child {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 80px;
+            height: 80px;
+            border: none;
+            border-radius: 0;
+            background-color: #1677ff9c;
+        }
+
+        &.default {
+            #child-1 {
+                z-index: 0;
+                transform: translate(-20px, -20px);
+            }
+
+            #child-2 {
+                z-index: 1;
+            }
+
+            #child-3 {
+                z-index: 2;
+                transform: translate(20px, 20px);
+            }
+        }
+    }
+
+    &.flex {
+        display: flex;
+        column-gap: 10px;
+
+        &.default {
+            flex-direction: row;
+        }
+
+        &.item {
+            #child-2 {
+                flex: 1 1 auto;
+            }
+        }
+
+        &.center {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

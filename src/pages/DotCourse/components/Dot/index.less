@@ -1,0 +1,133 @@
+.my-dot {
+    display: block;
+    width: 10px;
+    height: 10px;
+    transition: all 0.3s ease-in-out;
+
+
+    &.default {
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    &.size {
+        width: 100px;
+        height: 100px;
+    }
+
+    &.color {
+        background-color: #1677ff;
+
+
+    }
+
+    &.border {
+        background-color: white;
+        border: 2px dashed rgb(227, 74, 74);
+    }
+
+    &.box-shadow {
+        box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+.box {
+    &.default {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border: 2px dashed rgb(227, 74, 74);
+        border-radius: 0;
+    }
+
+    &.pink {
+        border: none;
+        background-color: pink;
+    }
+
+    &.color-gradient {
+        border: none;
+        background: linear-gradient(blue, pink);
+
+        &:hover {
+            background-image: linear-gradient(20deg, hsl(20, 100%, 70%), hsl(150, 100%, 50%));
+            /*fallback*/
+            animation: colorSpin 3s linear infinite;
+
+            @keyframes colorSpin {
+                0% {
+                    filter: hue-rotate(0deg);
+                }
+
+                100% {
+                    filter: hue-rotate(360deg);
+                }
+            }
+        }
+    }
+
+    &.background-image {
+        border: none;
+        background-position: center;
+        background-size: 110%;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAHgCAMAAABKCk6nAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC5VBMVEUAAAD/ZgD/ZwD/aAD/ZwD/ZwD/ZwD/ZwD/ZwD/aAD/ZAD/gAD/ZwD/aAD/ZwD/aAD/ZwD/ZgD/ZwD/ZwD/ZgD/bQD/ZgD/ZwD/ZwD/ZwD/VQD/YwD/ZwD/ZwD/ZgD/ZwD/aAD/cQD/ZwD/AAD/aAD/ZwD/ZwD/agD/ZwD/aAD/aAD/ZwD/ZwD/bQD/aAD/aQD/ZwD/ZgD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZgD/ZgD/ZwD/ZwD/ZwD/ZwD/ZwD/ZgD/ZwD/ZgD/ZwD/awD/ZwD/ZwD/ZwD/aAD/XQD/ZwD/gAD/ZwD/ZwD/aAD/ZwD/ZgD/ZwD/ZAD/aAD/ZwD/ZwD/ZgD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/ZwD/agD/ZwD/bgv/cRH/aAL/bAn/iTn/5dP//////v7/9e7/697/3sf/0bL/xJz/tIL/nVr/gy//awb/iDj/5NL//v3/3cb/gCr/8+v//fv/5tX/yqb/oWL/dxv/8ur/6tv/agX/lEz/5NH/uYr/jT//lEv/hDH/nlz/7N//tIH/eBz/j0P//Pr/1rv/yKL/dBX/9Oz/1bj/lU7/vZH/28P/cxT/fyj/hzb/+PT/kEX/+vf/+/n/k0n/izz/fib/6Nj/1bn/rnf/iDf/awf/sn7/+/j/eyL/y6f/hTP/z6//wpj/+PP/bgz/oWH/1rr/wpn/fSX/aAH/mlb/dRf/nVv/9/L/m1j/bw3/pGf/4s7/mlX/kET/toX/qnH/zqz/49D/0bH/+vb/aQT/xp//yaT/hTL/2L3/chP/7+X/m1f/kkj/pmn/w5v/rHT/dBb/9/H/r3n/sn3/cRD/tYP/vpL/gSv/sXz/vI//o2X/dRj/aQP/k0r/rHP/7eH/eiD/yaX/59b/y6j/6dr/kUf/gi7/v5P/3MX/qW//kUb/gSz/4c3/ijr/pmr/eR//4cz/0rP/8un/8Ob/dhr/lk//6Nn/q3L/7eD/2sH/dhmuBzlPAAAAX3RSTlMAI22q1Pb00KRlHAJXxf27SkHVxzIHk/78fgMSxrIK0sAJrwF2PvkpulY7xKgObE6pjrfZ5/Dm8tbRtIhmSJ9LyKw0H4FjtZsLwwSznHv7LbAhQK6jVb3d7u3auY1NDFshYcYAAAABYktHRGYs1NklAAAAB3RJTUUH5wUeBhErRFuIpAAABsdJREFUeNrt3Pe/jnUcx/FLIaloCFGSSnsPDe299x5XRtc5TTupSBlJKA0kUkaikKRoD+20p/Ze2uPnSHmch/Q4930cnOvzeL7+gO99fd/P43ac+3EkSZmqrbBi9RqpclzNlWqtXDtZbKusupp9QlSn7uqL8V1jTcvEaa16i/CuXb+BVSLVcJ1GZX0br2uSaK3XpIzv+vaIV9MNFr4/+/MbsmYb/gNc3xYx22iB78a+vwpa803m+zaqbomobTofeDM7xG3zecBbmCFuWyZJNX8DB67GVsnWVojcNsm2RojcdonvoUO3fVLTCJHbIbFB6HYEHLudAAMWYAEWYAEWYAEGLMACLMACLMACDFiABViABViABViAAQuwAAuwAAuwAAMWYAEWYAEWYAEGLMACLMACLMACLMCABViABViABViAAQuwAAuwAAuwAAO2AWABFmABFmABFmDAAizAAizAAizAgAVYgAVYgAVYgAUYsAALsAALsAALMGABFmABFmABFmDAAizAAizAAizAAgxYgAVYgAVYgAUYsAALsAALsAALMGABFmABFmABFmABBizAAizAAqwcAJ/VqqrVevletU0o4LZnZ1WwktJzzj3v/AsubNe+Eq/aoWNhL96pc5c4wK0uyqp0XS/udsmllXTVywp+1e49wgBfnuWgnldcWQnv2r2KeMXeYYD7ZPmo71X9luVVrwa8zOvfrTfgyMDzuqY34NDAWacBAwFHBs6yQZcADg2cZdf2AxwaOCu9DnBo4KxkcA/AkYGz7PobAIcGzrrfCDg0cDboJsChgbMhQwGHBs6G9QIcGji7eTjg0MDZkFsAhwbOSkcADg2cjWwFODRwdmtrwKGBs1GAYwP3vw1waOBs5O2AQwNnowHHBh4zFnBo4Gwc4NjAJXcADg2cjQccG7ikC+DQwNmdgGMDT5gIODRwdhfg2MB3A44N3HUg4NDAWR/AsYEnAa4M4EmTp1T6A7S6dPJN94zudnbJkn2mBLgSbj1+aT7I1HsHTFuCn3VMBbzkt75vKT/L9PsfqLDwDMBLfuuhS/9xZlb0f+16EHAugNMeDw2rEPDDgPMBnKZdHqkIcE/AeQFO2zxaAeDHWgPOC3D6+BMVEO4HODfA6ZQniwd+CnB+gNMes4oGngk4R8Dp088UC/ws4DwBp88V+6PL5wHnCjh9oUjgFwHnC/il2cUBvww4X8DpK8UBjwacM+BXJxQF/BrgnAGnr1fypw2AqxjwG4BjA6cdAccGfhNwbOAOgGMDPz4bcGjgdBbg2MBvAY4N/Dbg2MDDAccGbgc4NvBYwLGB3wEcG3ggYMCAlynwu+/NGVVYM6YDzh9wm86Fn/b+B4BzBzynmI8HPgScO+CifiPhI8C5A/64GOBPAAMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMBVCvjTIm79WbmnfV4M8BflHtd+TOGnfVnuaV8V8WxfhwGe2LfgS3/zbrmnfdupiBG/K//pBhR82LTvyz3srMKvOrd1GOB0xA8/lhbST+N+LuC0X+aWFtivv00p4Mtv8O8FHTboj7YFPNzk8wq8arc/0zjAWl4BBizAAizAAizAAgxYgAVYgAVYgAUYsAALsAALsAALsAADFmABFmABFmABBizAAizAAizAAgxYgAVYgAVYgAVYgAELsAALsAALsAADFmABFmABFmABBgwYsAALsAALsAALMGABFmABFmABFmDAAizAAizAAizAAgxYgAVYgAVYgAUYsAALsAALsAALMGABFmABFmABFmABBizAAizAAizAAgxYgAVYgAVYgAUYsA0AC7AAC7AAC7AAAxZgARZgARZg/T9wAyNEbuekhREit0uyqxEit1tSywiR2z1paYTI7ZHUrmOFuLVokiR1zRC3PZMk2csMYWtQbx7whnsbImr7JPPbt6ElYlZzv7+Bk/1NEbMDFvgmjQ60RcQOSv7t4EOsEa9mhy4ETpocZo9oHV7GN0lWOeJIk0SqRstkkY5qapU4HX1M8t+OPa65ZUL86+j4esnia3xC/RNPOln57ZRTTzv9jDPLmv4FhSEDtYwZLPIAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDUtMzBUMDY6MTc6NDMrMDA6MDBu4RKPAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTA1LTMwVDA2OjE3OjQzKzAwOjAwH7yqMwAAAABJRU5ErkJggg==')
+    }
+
+    &.border-radius {
+        border-radius: 42px;
+    }
+}
+
+
+.animation {
+    &.default {
+        width: 100px;
+        height: 100px;
+        border: none;
+        border-radius: 0;
+        background-color: #1677ff;
+    }
+
+    &.bounce {
+        /* 执行动画：动画名 时长 线性 无限次播放 */
+        animation: bounce 2s ease infinite;
+    }
+
+    &.rotate {
+        transform: rotate(45deg);
+    }
+
+    &.scroll {
+        /* 设置旋转元素的基点位置 */
+        transform-origin: bottom right;
+        /* 执行动画：动画名 时长 线性 无限次播放 */
+        animation: scroll-move 1s linear infinite;
+    }
+}
+
+/* 方形翻转动画 */
+@keyframes scroll-move {
+    100% {
+        transform: translateX(-100%) rotateZ(90deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}

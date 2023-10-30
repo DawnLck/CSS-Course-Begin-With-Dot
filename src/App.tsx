@@ -4,7 +4,7 @@ import "./App.css";
 import { default as Course } from "./pages/DotCourse";
 
 function App() {
-  const [ready, setReady] = useState(true);
+  const [ready, setReady] = useState(false);
   return (
     <div className="App">
       {/* Welcome */}
